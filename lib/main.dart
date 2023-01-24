@@ -17,7 +17,8 @@ class MyApp extends StatelessWidget {
           appBarTheme: const AppBarTheme(color: Colors.indigo),
           elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(
-                  primary: Colors.indigo, onPrimary: Colors.white))),
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.indigo))),
       home: const MainWindow(),
     );
   }

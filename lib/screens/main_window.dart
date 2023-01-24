@@ -58,8 +58,7 @@ class MainWindowState extends State<MainWindow> {
             child: const Text('Másik lap'),
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return SecondWindow(
-                    actualcurrency: _currencySelected.toString());
+                return SecondWindow(actualcurrency: _currencySelected.name);
               }));
             },
           ),
@@ -74,7 +73,7 @@ class MainWindowState extends State<MainWindow> {
     double rate = double.parse(rateController.text);
 
     double futureAmount = amount + (amount * term * rate) / 100;
-    return 'A befektetésed $term év múlva $futureAmount $_currencySelected-t fog érni.';
+    return 'A befektetésed $term év múlva $futureAmount ${_currencySelected.name}-t fog érni.';
   }
 
   void reset() {
